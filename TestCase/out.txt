@@ -1,0 +1,21 @@
+./TestCase/in.txt[line    5]: user type definition
+./TestCase/in.txt[line    6]: global variable definition
+./TestCase/in.txt[line    7]: struct definition
+./TestCase/in.txt[line   11]: global variable definition
+./TestCase/in.txt[line   12]: user type definition
+./TestCase/in.txt[line   13]: global variable definition
+./TestCase/in.txt[line   15]: function implementation
+./TestCase/in.txt[line   17]: local variable definition
+./TestCase/in.txt[line   18]: local variable definition
+./TestCase/in.txt[line   19]: local variable definition
+./TestCase/in.txt[line   20]: local variable definition
+./TestCase/in.txt[line   22]: expression
+./TestCase/in.txt[line   27]: expression
+./TestCase/in.txt[line   31]: expression
+./TestCase/in.txt[line   36]: if clause
+./TestCase/in.txt[line   39]: expression
+./TestCase/in.txt[line   42]: else clause
+./TestCase/in.txt[line   43]: expression
+./TestCase/in.txt[line   47]: while clause
+./TestCase/in.txt[line   54]: expression
+./TestCase/in.txt[line   59]: return statement

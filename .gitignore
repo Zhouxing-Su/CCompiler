@@ -1,0 +1,9 @@
+/TestCase/IR.def
+/TestCase/IR.imp
+/TestCase/target.asm
+/bin
+/doc/IELR(1)：Practical LR(1) Parser Tables for Non-LR(1) Grammars with Conflict Resolution.pdf
+/doc/ANSI C grammar
+/obj
+/VisualStudio2012project/Debug
+/VisualStudio2012project/VisualStudio2012project.sdf

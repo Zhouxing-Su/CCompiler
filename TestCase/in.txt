@@ -1,0 +1,60 @@
+/** 
+ * this is a test case made by Kirk !
+**/
+
+typedef int state;
+unsigned g = 100;			// MOV %g:u4, #100:i4
+struct t{
+	int a,b;
+	char s[10];
+	double d;
+}gt;
+typedef struct t testStruct;
+testStruct *tt,yy;
+
+int main()
+{							// {
+	int i = 0, j, k;		// MOV %i:i4, #0:i4
+	float f1, f2 = 1.0;		// MOV %f2:f4, #1.000000:f8
+	double d = 255;			// MOV %d:f8, #255:i4
+	char c = 'c';			// MOV %c:c1, #39:c1
+	
+	j = i + g/f2 * (d - c);	// DIV %@t0:f4, %g:state, %f2:f4
+							// SUB %@t1:f8, %d:f8, %c:c1
+							// MUL %@t2:f8, %@t0:f4, %@t1:f8
+							// ADD %@t3:f8, %i:i4, %@t2:f8
+							// MOV %j:i4, %@t3:f8
+	k += d + i++;			// MOV %@t4:i4, %i:i4
+							// INC %i:i4
+							// ADD %@t5:f8, %d:f8, %@t4:i4
+							// ADD %k:i4, %k:i4, %@t5:f8
+	f1 = d-- / (c+=4);		// MOV %@t6:f8, %d:f8
+							// DEC %d:f8
+							// ADD %c:c1, %c:c1, #4:i4
+							// DIV %@t7:f8, %@t6:f8, %c:c1
+							// MOV %f1:f4, %@t7:f8
+	if( j >= k ) {			// {
+							// GE  %@t8:i4, %j:i4, %k:i4
+							// JCF AUTO_LABEL0, %@t8:i4
+		i *= ( d != 0 );	// NE  %@t9:i4, %d:f8, #0:i4
+							// MUL %i:i4, %i:i4, %@t9:i4
+	}						// JMP AUTO_LABEL1
+	else {					// AUTO_LABEL0:
+		j = f2 < 8.76;		// LT  %@t10:i4, %f2:f4, #8.760000:f8
+	}						// MOV %j:i4, %@t10:i4
+							// AUTO_LABEL1:
+							// }
+	while( i && j ) {		// {
+							// AUTO_LABEL2:
+							// NEQ %@t11:i4, %i:i4, #0:i4
+							// JCF AUTO_LABEL3, %@t11:i4
+							// NEQ %@t11:i4, %j:i4, #0:i4
+							// AUTO_LABEL3:
+							// JCF AUTO_LABEL4, %@t11:i4
+		d = i;				// MOV %d:f8, %i:i4
+							// JMP AUTO_LABEL2
+							// AUTO_LABEL4:
+	}						// }
+	
+	return 0;
+}							// }
